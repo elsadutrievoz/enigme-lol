@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Énigme 1</title>
+  <style>
+    /* Votre style CSS existant */
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px; /* écart plus grand entre le titre et le lien */
+    }
+    p {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 80px; /* écart encore plus grand entre le lien et la deuxième phrase */
+    }
+    .second-ph {
+      font-weight: bold;
+      font-size: 28px; /* texte de la deuxième phrase plus gros */
+      text-align: center; /* centré */
+    }
+    #draggableContainer {
+      position: absolute;
+      top: 300px; /* Ajustement pour placer les lettres plus bas */
+      left: 20px; /* Ajustement horizontal */
+    }
+    .draggable {
+      display: inline-block;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 48px; /* Taille des lettres agrandie */
+      position: absolute; /* Position absolue pour le placement libre */
+    }
+    .violet {
+      color: #6a0dad; /* Violet plus foncé */
+    }
+    .vert {
+      color: green; /* Vert */
+      left: 150px; /* Ajustement pour créer un deuxième tas distinct */
+    }
+    .bleu {
+      color: blue; /* Bleu */
+      left: 300px; /* Ajustement pour créer un troisième tas distinct */
+    }
+    .jaune {
+      color: #e5b800; /* Jaune plus foncé */
+      left: 450px; /* Ajustement pour créer un quatrième tas distinct */
+    }
+    .rouge {
+      color: red; /* Rouge */
+      left: 600px; /* Ajustement pour créer un cinquième tas distinct */
+    }
+    .orange {
+      color: orange; /* orange */
+      left: 750px; /* Ajustement pour créer un sixième tas distinct */
+    }
+    /* Ajustement de l'écart entre les lettres vertes */
+    .vert:nth-child(odd) {
+      top: 0px;
+    }
+    .vert:nth-child(even) {
+      top: 30px;
+    }
+    /* Ajustement de l'écart entre les lettres bleues */
+    .bleu:nth-child(odd) {
+      top: 0px;
+    }
+    .bleu:nth-child(even) {
+      top: 30px;
+    }
+    /* Ajustement de l'écart entre les lettres jaunes */
+    .jaune:nth-child(odd) {
+      top: 0px;
+    }
+    .jaune:nth-child(even) {
+      top: 30px;
+    }
+    /* Ajustement de l'écart entre les lettres rouges */
+    .rouge:nth-child(odd) {
+      top: 0px;
+    }
+    .rouge:nth-child(even) {
+      top: 30px;
+    }
+    /* Ajustement de l'écart entre les lettres bleues et les lettres vertes */
+    .bleu {
+      top: 0px;
+      left: 300px;
+    }
+    /* Ajustement de l'écart entre les lettres vertes et les lettres jaunes */
+    .jaune {
+      top: 0px;
+      left: 450px;
+    }
+    /* Ajustement de l'écart entre les lettres jaunes et les lettres rouges */
+    .rouge {
+      top: 0px;
+      left: 600px;
+    }
+    /* Ajustement de l'écart entre les lettres rouges et les lettres oranges */
+    .orange {
+      top: 0px;
+      left: 750px;
+    }
+  </style>
+</head>
+<body>
+  <h1><span style="color: green;">Bravo !</span> Vous avez réussi à trouver la première partie de mon profil.</h1>
+  <p><a href="https://drive.google.com/file/d/1aEZ6W1jWwgYYXlvhwwD1RzlQpUXSmUi-/view" target="_blank" rel="noopener noreferrer">Pièce 1 CV</a></p>
+  <p class="second-ph">À vous de jouer pour la deuxième énigme, réussirez-vous à trouver le bon ordre ? </p>
+  <div id="draggableContainer">
+    <span class="draggable violet" style="top: 0px; left: 0px;">f</span>
+    <span class="draggable violet" style="top: 20px; left: 0px;">e</span>
+    <span class="draggable violet" style="top: 40px; left: 30px;">t</span>
+    <span class="draggable violet" style="top: 60px; left: 15px;">ü</span>
+    <span class="draggable violet" style="top: 80px; left: 50px;">n</span>
+    <span class="draggable violet" style="top: 100px; left: 0px;">f</span>
+    <span class="draggable violet" style="top: 120px; left: 0px;">r</span>
+    
+    <!-- Lettres vertes à côté des violettes -->
+    <span class="draggable vert">s</span>
+    <span class="draggable vert" style="top: 20px;">o</span>
+    <span class="draggable vert" style="top: 40px; left: 230px;">e</span>
+    <span class="draggable vert" style="top: 60px; left: 215px;">d</span>
+    <span class="draggable vert" style="top: 80px; left: 230px;">g</span>
+    <span class="draggable vert" style="top: 100px;">n</span>
+    <span class="draggable vert" style="top: 120px;">u</span>
+    
+    <!-- Nouvelles lettres bleues -->
+    <span class="draggable bleu" style="top: 0px; left: 300px;">q</span>
+    <span class="draggable bleu" style="top: 20px; left: 310px;">e</span>
+    <span class="draggable bleu" style="top: 40px; left: 350px;">u</span>
+    <span class="draggable bleu" style="top: 60px; left: 300px;">m</span>
+    <span class="draggable bleu" style="top: 80px; left: 320px;">a</span>
+    <span class="draggable bleu" style="top: 100px; left: 370px;">è</span>
+    <span class="draggable bleu" style="top: 120px; left: 350px;">t</span>
+    <span class="draggable bleu" style="top: 140px; left: 300px;">i</span>
+    <span class="draggable bleu" style="top: 160px; left: 330px;">r</span>
+    
+    <!-- Nouvelles lettres jaunes -->
+    <span class="draggable jaune" style="top: 0px; left: 450px;">q</span>
+    <span class="draggable jaune" style="top: 20px; left: 460px;">o</span>
+    <span class="draggable jaune" style="top: 40px; left: 500px;">u</span>
+    <span class="draggable jaune" style="top: 60px; left: 450px;">t</span>
+    <span class="draggable jaune" style="top: 80px; left: 470px;">a</span>
+    <span class="draggable jaune" style="top: 100px; left: 520px;">r</span>
+    
+    <!-- Nouvelles lettres rouges -->
+    <span class="draggable rouge" style="top: 0px; left: 600px;">s</span>
+    <span class="draggable rouge" style="top: 20px; left: 610px;">h</span>
+    <span class="draggable rouge" style="top: 40px; left: 650px;">i</span>
+    <span class="draggable rouge" style="top: 60px; left: 600px;">t</span>
+    <span class="draggable rouge" style="top: 80px; left: 620px;">x</span>
+    <span class="draggable rouge" style="top: 100px; left: 670px;">t</span>
+
+    <!-- Nouvelles lettres oranges -->
+    <span class="draggable orange" style="top: 0px; left: 750px;">p</span>
+    <span class="draggable orange" style="top: 20px; left: 770px;">o</span>
+    <span class="draggable orange" style="top: 40px; left: 740px;">r</span>
+    <span class="draggable orange" style="top: 60px; left: 780px;">r</span>
+    <span class="draggable orange" style="top: 80px; left: 770px;">i</span>
+    <span class="draggable orange" style="top: 90px; left: 790px;">i</span>
+    <span class="draggable orange" style="top: 100px; left: 790px;">m</span>
+    <span class="draggable orange" style="top: 120px; left: 750px;">e</span>
+
+    <div style="text-align: center; margin-top: 300px;">
+    <a href="https://drive.google.com/file/d/1U6AlIRC60UnETuAOHqgYaz_wkfhxtB61/view" target="_blank" rel="noopener noreferrer" style="font-size: 14px; font-style: italic;">Indice</a>
+
+    <div style="text-align: center; margin-top: 2px;">
+    <a href="https://drive.google.com/file/d/1Ito-wwjqERW7kuyPk8u1Qx7TKOnkMsh9/view" target="_blank" rel="noopener noreferrer" style="font-size: 14px; font-style: italic;">Solution</a>
+  </div>
+
+  <script>
+    const draggables = document.querySelectorAll('.draggable');
+    draggables.forEach(draggable => {
+      draggable.addEventListener('mousedown', (event) => {
+        draggable.style.position = 'absolute';
+        draggable.style.zIndex = 1000;
+        document.body.append(draggable);
+
+        moveAt(event.pageX, event.pageY);
+
+        function moveAt(pageX, pageY) {
+          draggable.style.left = pageX - draggable.offsetWidth / 2 + 'px';
+          draggable.style.top = pageY - draggable.offsetHeight / 2 + 'px';
+        }
+
+        function onMouseMove(event) {
+          moveAt(event.pageX, event.pageY);
+        }
+
+        document.addEventListener('mousemove', onMouseMove);
+
+        draggable.onmouseup = function() {
+          document.removeEventListener('mousemove', onMouseMove);
+          draggable.onmouseup = null;
+        };
+      });
+
+      draggable.ondragstart = function() {
+        return false;
+      };
+    });
+  </script>
+</body>
+</html>
